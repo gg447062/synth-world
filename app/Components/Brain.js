@@ -45,6 +45,7 @@ export default function Brain() {
   const beat = useRef(0);
   const [bpmVal, setBpmVal] = useState(120);
   const bpm = useRef(bpmVal);
+  const [started, setStarted] = useState(false);
 
   function setBPM(e) {
     bpm.current = e.target.value;
@@ -52,6 +53,10 @@ export default function Brain() {
   }
 
   function play() {
+    if (!started) {
+      Tone.start();
+      setStarted(true);
+    }
     Tone.Transport.toggle();
     setPlaying(!playing);
   }
