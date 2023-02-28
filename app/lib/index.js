@@ -1,5 +1,7 @@
 export const baseURL =
-  'https://gateway.pinata.cloud/ipfs/Qma27ocxGX8xFWjVjeaquRwWfFkC9mLhrALkMgotjVU6tm';
+  process.env.NODE_ENV === 'development'
+    ? 'assets/audio'
+    : 'https://d2z7jsi40t2znj.cloudfront.net';
 
 export const initialMonoSample = 'BASSOON';
 export const initialPolySample = 'HONKY-TONK_PIANO';
