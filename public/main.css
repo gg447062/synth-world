@@ -10,6 +10,8 @@
   --dark: rgb(42, 42, 42);
   --light: rgb(245, 240, 240);
   --active: rgb(255, 68, 118);
+  --inactive: rgb(251, 167, 188);
+  --inactive-bg: rgba(226, 240, 98, 0.675);
   --dark-border: 1px solid var(--dark);
   --shadow: 2px 2px var(--dark);
   --pad-dimension: 3.8em;
@@ -612,6 +614,11 @@ legend {
 
 #record-button {
   color: var(--active);
+}
+
+#record-button:disabled {
+  color: var(--inactive);
+  background-color: var(--inactive-bg);
 }
 
 #recorder-controls {
